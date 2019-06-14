@@ -1,5 +1,5 @@
 {
-  "name": "terria-cube",
+  "name": "dea-map",
   "version": "0.0.2",
   "description": "Geospatial catalog explorer based on TerriaJS.",
   "license": "Apache-2.0",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "http://github.com/TerriaJS/terria-cube"
+    "url": "http://github.com/TerriaJS/dea-map"
   },
   "dependencies": {
     "terriajs-server": "^2.9.1"

@@ -46,11 +46,11 @@
             link: "http://www.example.com"
         },*/
         // This is used in various text messages. You should also set <title> in index.html
-        appName: "Terria-Cube Prototype",
+        appName: "Digital Earth Australia",
 
         // See comments in lib/Views/global.scss for further information about customising colors, logos, fonts etc.
         brandBarElements: [
-            "<span style='font-size: larger; color: white'>Terria-Cube Prototype</span>",
+            "<span style='font-size: larger; color: white'>Digital Earth Australia</span>",
             "<a href='https://data61.csiro.au/' target='_blank'><img class='right' src='images/DATA61_CSIRO.png' alt='Data61' style=\"width: 55px; height: 33px; float: right; margin-top: 7.5px;\"/></a>",
             "<br/><span style='font-size: xx-small; color: white'>Version: {{version}}</span>",
         ],
