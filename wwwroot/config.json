@@ -18,6 +18,8 @@
             text: "Disclaimer: This map must not be used for navigation or precise spatial analysis",
             url: ""
         },
+        feedbackPreamble: "We would love to hear from you, contact us at dea@ga.gov.au or enter the details below.",
+
         /*
         // Text that will be added to any pages printed from your site.
         printDisclaimer:{
@@ -49,9 +51,9 @@
 
         // See comments in lib/Views/global.scss for further information about customising colors, logos, fonts etc.
         brandBarElements: [
-            "<img src='images/DE-Australia-logo.png' alt='Digital Earth Australia' title='Version: {{version}}'/>",
-            "<div style='display: inline-block; text-align: center; width: 115px; height: 60px; color: white'><span style='font-size: small'>Prototype Map</span><br/><span style='font-size: xx-small'>{{version}}</span></div>",
-            "<a href='https://data61.csiro.au/' target='_blank'><img class='right' src='images/DATA61_CSIRO.png' alt='Data61' style=\"width: 55px; height: 33px; float: right; margin-top: 7.5px;\"/></a>",
+            "<a id='primary-logo' target='_blank' rel='noreferrer noopener' style=\"vertical-align:top;\";><img src='images/DE-Australia-logo.png' class='left' style=\"width: 130px; padding-top: 5px; padding-left: 5px\" alt='Digital Earth Australia' title='Version: {{version}}'/></a>",
+            "<a id='secondary-logo' href='https://data61.csiro.au/' target='_blank'><img class='right' style=\"width:65px; padding-bottom: 10px; padding-left: 15px\" src='images/data61-csiro.svg' alt='Data61 logo' title='Data61 logo'/></a>",
+            "<a id='tertiary-logo' target='https://www.ga.gov.au/' rel='noreferrer noopener'><img src='images/geoscience_stacked.svg' style=\"padding-bottom: 5px; width: 110px;\"  alt='Geoscience Australia logo' title='Geoscience Australia logo'/></a>",
         ],
         // Shown when things go wrong.
         supportEmail: "help@example.com",

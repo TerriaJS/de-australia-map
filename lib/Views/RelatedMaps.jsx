@@ -27,117 +27,59 @@ function RelatedMaps(props) {
       <p>Clicking on a map below will open it in a separate window or tab.</p>
 
       <div className={classNames(PanelStyles.section, Styles.section)}>
-        <a target="_blank" href="http://nationalmap.gov.au/renewables/">
+        <a target="_blank" href="http://nationalmap.gov.au/">
           <img
             className={Styles.image}
-            src={require("../../wwwroot/images/aremi.jpg")}
-            alt="AREMI"
+            src={require("../../wwwroot/images/nationalmap.png")}
+            alt="NationalMap"
           />
         </a>
 
         <a
           target="_blank"
           className={Styles.link}
-          href="http://nationalmap.gov.au/renewables/"
+          href="http://nationalmap.gov.au/"
         >
-          AREMI
+          NationalMap
         </a>
 
         <p>
-          AREMI provides access to Australian spatial data relevant to the
-          Renewable Energy industry, sourced from Government, Industry and
-          Research.
+          The NationalMap is a website for map-based access to spatial data from
+          Australian government agencies. It has been developed by Data61
+          working closely with the Department of the Prime Minister and Cabinet,
+          Geoscience Australia and other government agencies.
         </p>
       </div>
 
       <div className={classNames(PanelStyles.section, Styles.section)}>
-        <a target="_blank" href="http://nationalmap.gov.au/northernaustralia/">
+        <a target="_blank" href="https://maps.digitalearth.africa/">
           <img
             className={Styles.image}
-            src={require("../../wwwroot/images/northernaustralia.jpg")}
-            alt="Northern Australia"
+            src={require("../../wwwroot/images/DigitalEarthAfrica.png")}
+            alt="Digital Earth Africa"
           />
         </a>
 
         <a
           target="_blank"
           className={Styles.link}
-          href="http://nationalmap.gov.au/northernaustralia/"
+          href="https://maps.digitalearth.africa/"
         >
-          Northern Australia
+          Digital Earth Africa
         </a>
 
         <p>
-          The Northern Australia NationalMap forms part of the Government's
-          commitment to developing northern Australia by providing easy access
-          to authoritative and other spatial data on northern Australia to
-          governments, business and the public. More information on the
-          Government's White Paper on Developing Northern Australia is available
-          here:{" "}
+          Digital Earth Africa is leveraging international Earth Observation
+          (EO) data and science to produce new information and services that
+          benefit African countries.{" "}
           <a
             target="_blank"
             className={Styles.link}
-            href="https://northernaustralia.dpmc.gov.au"
+            href="https://maps.digitalearth.africa/"
           >
-            https://northernaustralia.dpmc.gov.au
+            https://maps.digitalearth.africa/
           </a>
           .
-        </p>
-      </div>
-
-      <div className={classNames(PanelStyles.section, Styles.section)}>
-        <a target="_blank" href="http://neiiviewer.nicta.com.au">
-          <img
-            className={Styles.image}
-            src={require("../../wwwroot/images/neii.jpg")}
-            alt="NEII Viewer"
-          />
-        </a>
-
-        <a
-          target="_blank"
-          className={Styles.link}
-          href="http://www.neii.gov.au/viewer/"
-        >
-          NEII Viewer
-        </a>
-
-        <p>
-          The National Environmental Information Infrastructure (NEII) is an
-          information platform designed to improve discovery, access and re-use
-          of nationally significant environmental data. More information on the
-          NEII is available here:{" "}
-          <a
-            target="_blank"
-            className={Styles.link}
-            href="http://neii.gov.au/data-viewer"
-          >
-            neii.gov.au/data-viewer
-          </a>
-          .
-        </p>
-      </div>
-
-      <div className={classNames(PanelStyles.section, Styles.section)}>
-        <a target="_blank" href="http://map.aurin.org.au">
-          <img
-            className={Styles.image}
-            src={require("../../wwwroot/images/aurin-map.jpg")}
-            alt="AURIN Map"
-          />
-        </a>
-
-        <a
-          target="_blank"
-          className={Styles.link}
-          href="http://map.aurin.org.au"
-        >
-          AURIN Map
-        </a>
-
-        <p>
-          AURIN Map provides access to datasets on urban infrastructure for
-          urban researchers, policy and decision makers.
         </p>
       </div>
     </MenuPanel>
