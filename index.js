@@ -2,8 +2,11 @@
 
 /*global require,window */
 
+import languageOverrides from './lib/Language/overrides';
+
 var terriaOptions = {
-    baseUrl: 'build/TerriaJS'
+    baseUrl: 'build/TerriaJS',
+    languageOverrides: languageOverrides
 };
 
 // checkBrowserCompatibility('ui');
