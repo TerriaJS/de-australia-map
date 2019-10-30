@@ -2,8 +2,11 @@
 
 /*global require,window */
 
+import languageOverrides from './lib/Language/overrides';
+
 var terriaOptions = {
-    baseUrl: 'build/TerriaJS'
+    baseUrl: 'build/TerriaJS',
+    languageOverrides: languageOverrides
 };
 
 // checkBrowserCompatibility('ui');
@@ -22,6 +25,7 @@ import GazetteerSearchProviderViewModel from 'terriajs/lib/ViewModels/GazetteerS
 import GnafSearchProviderViewModel from 'terriajs/lib/ViewModels/GnafSearchProviderViewModel.js';
 import defined from 'terriajs-cesium/Source/Core/defined';
 import render from './lib/Views/render';
+import RequestScheduler from 'terriajs-cesium/Source/Core/RequestScheduler';
 
 // Register all types of catalog members in the core TerriaJS.  If you only want to register a subset of them
 // (i.e. to reduce the size of your application if you don't actually use them all), feel free to copy a subset of
@@ -114,7 +118,12 @@ module.exports = terria.start({
                 viewState.notifications.push(options);
             }
         }
-
+        // Ignore Cesium's Request limiter for DE-Australia tiles
+        if (defined(terria.configParameters.customRequestSchedulerLimits)) {
+          Object.keys(terria.configParameters.customRequestSchedulerLimits).forEach(function(k) {
+            RequestScheduler.requestsByServer[k] = terria.configParameters.customRequestSchedulerLimits[k];
+          });
+        }
         render(terria, allBaseMaps, viewState);
     } catch (e) {
         console.error(e);
