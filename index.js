@@ -51,6 +51,12 @@ if (process.env.NODE_ENV === "development") {
     window.viewState = viewState;
 }
 
+// Unfortunately terriajs isn't passing props as a param into the language override FNs,
+// so we'll use the window for this
+window.setShowWelcomeVideo = function(bool) {
+    viewState.showWelcomeVideo = bool;
+};
+
 // If we're running in dev mode, disable the built style sheet as we'll be using the webpack style loader.
 // Note that if the first stylesheet stops being nationalmap.css then this will have to change.
 if (process.env.NODE_ENV !== "production" && module.hot) {
