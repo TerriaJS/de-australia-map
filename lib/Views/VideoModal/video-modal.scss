@@ -1,0 +1,56 @@
+@import "~terriajs-variables";
+@import "~terriajs-mixins";
+
+.VideoModalWrapper {
+  position: fixed;
+  z-index: 99999;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba($dark-with-overlay, 0.8);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.videoModal {
+  box-shadow: $box-shadow;
+  margin: 0;
+  width: 40%;
+  min-height: 31.5%;
+  background-color: black;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.large {
+  width: 95%;
+}
+.videoModalRatio {
+  padding-bottom: 58.5%;
+  padding-top: 25px;
+}
+.videoModalLoading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  svg {
+    fill: white;
+    width: 60px;
+    height: 60px;
+    top: -30px;
+    left: -30px;
+    position: absolute;
+  }
+}
+
+.videoModal--iframe {
+  border: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
