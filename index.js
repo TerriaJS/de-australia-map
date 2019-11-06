@@ -19,7 +19,7 @@ import registerCustomComponentTypes from 'terriajs/lib/ReactViews/Custom/registe
 import Terria from 'terriajs/lib/Models/Terria';
 import updateApplicationOnHashChange from 'terriajs/lib/ViewModels/updateApplicationOnHashChange';
 import updateApplicationOnMessageFromParentWindow from 'terriajs/lib/ViewModels/updateApplicationOnMessageFromParentWindow';
-import ViewState from 'terriajs/lib/ReactViewModels/ViewState';
+import ViewState, { DATA_CATALOG_NAME } from 'terriajs/lib/ReactViewModels/ViewState';
 import BingMapsSearchProviderViewModel from 'terriajs/lib/ViewModels/BingMapsSearchProviderViewModel.js';
 import GazetteerSearchProviderViewModel from 'terriajs/lib/ViewModels/GazetteerSearchProviderViewModel.js';
 import GnafSearchProviderViewModel from 'terriajs/lib/ViewModels/GnafSearchProviderViewModel.js';
@@ -46,6 +46,17 @@ registerCustomComponentTypes(terria);
 const viewState = new ViewState({
     terria: terria
 });
+viewState.openAddData = function() {
+    viewState.explorerPanelIsVisible = true;
+    viewState.activeTabCategory = DATA_CATALOG_NAME;
+
+    viewState.switchMobileView(viewState.mobileViewOptions.data);
+};
+viewState.closeCatalog = function() {
+    viewState.explorerPanelIsVisible = false;
+
+    viewState.switchMobileView(null);
+};
 
 if (process.env.NODE_ENV === "development") {
     window.viewState = viewState;
