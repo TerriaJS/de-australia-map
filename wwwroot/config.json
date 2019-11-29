@@ -34,6 +34,7 @@
             confirmationRequired: true,
             buttonTitle: "Acknowledge",
             denyText: "Cancel",
+            afterDenyLocation: "https://www.ga.gov.au/dea",
             title: "Disclaimer",
             // If the current browser location is not prod, or is dev, then show a "not the real site" warning.
             // The text of that is in lib/Views/DevelopmentDisclaimerPreamble.html
