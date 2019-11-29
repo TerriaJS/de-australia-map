@@ -115,9 +115,12 @@ module.exports = terria.start({
 
                 var options = {
                     title: (globalDisclaimer.title !== undefined) ? globalDisclaimer.title : 'Warning',
-                    confirmText: (globalDisclaimer.buttonTitle || "Ok"),
+                    confirmText: (globalDisclaimer.buttonTitle || "Acknowledge"),
+                    denyText: (globalDisclaimer.denyText || "Cancel"),
+                    denyAction: function() { 
+                        window.location = globalDisclaimer.afterDenyLocation || "https://www.ga.gov.au/dea";
+                    },
                     width: 500,
-                    height: 120,
                     message: message,
                     horizontalPadding : 100
                 };
@@ -130,6 +133,13 @@ module.exports = terria.start({
             RequestScheduler.requestsByServer[k] = terria.configParameters.customRequestSchedulerLimits[k];
           });
         }
+
+        // Update the ViewState based on Terria config parameters.
+        // Note: won't do anything unless terriajs version is >7.9.0
+        if (defined(viewState.afterTerriaStarted)) {
+            viewState.afterTerriaStarted();
+        }
+
         render(terria, allBaseMaps, viewState);
     } catch (e) {
         console.error(e);
