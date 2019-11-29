@@ -80,6 +80,16 @@
           "gsky.nci.org.au:80": 64,
           "gsky.nci.org.au:443": 64,
         }
+
+        // True to display welcome message on startup.
+        // "showWelcomeMessage": false,
+
+        // True to display in-app guides.
+        // "showInAppGuides": false,
+
+        // True to display new feature popups.
+        // "showFeaturePrompts": false,
+
     }
 }
 

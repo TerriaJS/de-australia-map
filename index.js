@@ -130,6 +130,13 @@ module.exports = terria.start({
             RequestScheduler.requestsByServer[k] = terria.configParameters.customRequestSchedulerLimits[k];
           });
         }
+
+        // Update the ViewState based on Terria config parameters.
+        // Note: won't do anything unless terriajs version is >7.9.0
+        if (defined(viewState.afterTerriaStarted)) {
+            viewState.afterTerriaStarted();
+        }
+
         render(terria, allBaseMaps, viewState);
     } catch (e) {
         console.error(e);
