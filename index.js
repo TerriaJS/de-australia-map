@@ -115,9 +115,12 @@ module.exports = terria.start({
 
                 var options = {
                     title: (globalDisclaimer.title !== undefined) ? globalDisclaimer.title : 'Warning',
-                    confirmText: (globalDisclaimer.buttonTitle || "Ok"),
+                    confirmText: (globalDisclaimer.buttonTitle || "Acknowledge"),
+                    denyText: (globalDisclaimer.denyText || "Cancel"),
+                    denyAction: function() { 
+                        window.location = globalDisclaimer.afterDenyLocation || "https://www.ga.gov.au/dea";
+                    },
                     width: 500,
-                    height: 120,
                     message: message,
                     horizontalPadding : 100
                 };
