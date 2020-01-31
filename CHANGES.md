@@ -1,6 +1,10 @@
 Change Log
 ==========
 
+### 2020-01-31
+
+* Upgrade to TerriaJS v7.11.1
+
 ### 2020-01-30
 
 * Upgrade to TerriaJS v7.11.0
